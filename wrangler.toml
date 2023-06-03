@@ -1,0 +1,10 @@
+name = "api"
+main = "src/index.ts"
+compatibility_date = "2023-06-03"
+
+[durable_objects]
+bindings = [{name = "USER", class_name = "User"}]
+
+[[migrations]]
+tag = "v1" # Should be unique for each entry
+new_classes = ["User"]

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/user.ts", "../src/index.ts"],
+  "sourcesContent": ["export class User {\n  state: DurableObjectState;\n\n  constructor(state: DurableObjectState) {\n    this.state = state;\n  }\n\n  async fetch(request: Request) {\n    return new Response(\"User response\");\n  }\n}\n", "/**\n * Welcome to Cloudflare Workers! This is your first worker.\n *\n * - Run `wrangler dev src/index.ts` in your terminal to start a development server\n * - Open a browser tab at http://localhost:8787/ to see your worker in action\n * - Run `wrangler deploy src/index.ts --name my-worker` to deploy your worker\n *\n * Learn more at https://developers.cloudflare.com/workers/\n */\n\nexport default {\n  async fetch(request: Request) {\n    return new Response(\"Hello World!\");\n  },\n};\n\nexport { User } from \"./user\";\n"],
+  "mappings": ";;;AAAO,MAAM,OAAN,MAAW;AAAA,IAGhB,YAAY,OAA2B;AACrC,WAAK,QAAQ;AAAA,IACf;AAAA,IAEA,MAAM,MAAM,SAAkB;AAC5B,aAAO,IAAI,SAAS,eAAe;AAAA,IACrC;AAAA,EACF;;;ACAA,MAAO,cAAQ;AAAA,IACb,MAAM,MAAM,SAAkB;AAC5B,aAAO,IAAI,SAAS,cAAc;AAAA,IACpC;AAAA,EACF;",
+  "names": []
+}
